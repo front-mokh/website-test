@@ -18,25 +18,30 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
     <script defer src="app.js"></script>
+
+    <style>
+       
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <header class="website-header flex">
+    <div class="containjer">
+        <header class="website-header">
             <p class="logo">Avenir School.</p>
             <nav>
-                <ul class="flex nav-items">
+                <ul class="nav-items">
                     <li><a href="#">Accueil</a></li>
                     <li><a href="#about-us">À Propos</a></li>
                     <li><a href="#our-values">Objectifs</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#gallery">Gallerie</a></li>
                     <li><a href="#contact-us">Contact</a></li>
-
                 </ul>
             </nav>
             <img id="theme-icon" src="assets/icons/moon.png" alt="">
-
+            <button class="mobile-nav-toggle">
+                <img src="assets/icons/hamburger.svg" alt="">
+            </button>
             <!--<a class="cta | secondary button" href="#contact-us">Contacter Nous</a>-->
         </header>
 
@@ -128,23 +133,17 @@
 
             <section id="gallery" class="gallery-section flow center-content">
 
-                <h1 class="title">Faites le tour du campus.</h1>
+                <h1 class="title">Faire Le Tour De L’École.</h1>
                 <div class="slider-container">
 
 
                     <div class="slider">
-                        <img class="active"
-                        src="assets/images/avenire-school.png" alt="">
-                    <img src="assets/images/as-class.jpg"
-                        alt="">
-                    <img
-                        src="assets/images/as-hall.png" alt="">
-                    <img 
-                        src="assets/images/as-waitting-room.png" alt="">
-                    <img  
-                        src="assets/images/as-building.png" alt="">
-                    <img
-                        src="assets/images/as-entry.jpg" alt="">
+                        <img class="active" src="assets/images/avenire-school.png" alt="">
+                        <img src="assets/images/as-class.jpg" alt="">
+                        <img src="assets/images/as-hall.png" alt="">
+                        <img src="assets/images/as-waitting-room.png" alt="">
+                        <img src="assets/images/as-building.png" alt="">
+                        <img src="assets/images/as-entry.jpg" alt="">
                     </div>
                     <div class="slider-controll">
 
@@ -158,7 +157,7 @@
 
                     </div>
                 </div>
-                <div class="gallery-grid" style="display: none;">
+                <div class="gallery-grid">
                     <img class="hidden slide-from-left" style="transition-delay: 0ms;"
                         src="assets/images/avenire-school.png" alt="">
                     <img class="hidden slide-from-top" style="transition-delay: 100ms;" src="assets/images/as-class.jpg"
@@ -181,35 +180,34 @@
 
 
             </section>
-    </div>
-    <section id="contact-us" class="contact-us-section text-inverted flow">
 
-        <h1 class="title">Contacter-nous!</h1>
-        <p class="sub-title">N'hésitez pas à nous contacter par téléphone, e-mail ou en vous rendant sur
-            place. Nous sommes là
-            pour répondre à vos questions!</p>
-        <div class="contacts-grid">
-            <div class="contact flow hidden slide-from-left">
-                <img class="ring" src="assets/icons/phone-dark.svg" alt="">
-                <p>+213 559 83 03</p>
-            </div>
-            <div class="contact flow hidden slide-from-right">
-                <img src="assets/icons/mail-dark.svg" alt="">
-                <p>avenir.dz@gmail.com</p>
-            </div>
-            <div class="contact flow hidden slide-from-left">
-                <img src="assets/icons/location-dark.svg" alt="">
-                <p>Oued Chaaba 05000, Batna, Algerie</p>
-            </div>
-            <div class="contact flow hidden slide-from-right">
-                <img src="assets/icons/clock-dark.svg" alt="">
-                <p>8:00h-16:00h</p>
-            </div>
-        </div>
+            <section id="contact-us" class="contact-us-section text-inverted flow">
 
-    </section>
+                <h1 class="title">Contacter-nous!</h1>
+                <p class="sub-title">N'hésitez pas à nous contacter par téléphone, e-mail ou en vous rendant sur
+                    place. Nous sommes là
+                    pour répondre à vos questions!</p>
+                <div class="contacts-grid">
+                    <div class="contact flow hidden slide-from-left">
+                        <img class="ring" src="assets/icons/phone-dark.svg" alt="">
+                        <p>+213 559 83 03</p>
+                    </div>
+                    <div class="contact flow hidden slide-from-right">
+                        <img src="assets/icons/mail-dark.svg" alt="">
+                        <p>avenir.dz@gmail.com</p>
+                    </div>
+                    <div class="contact flow hidden slide-from-left">
+                        <img src="assets/icons/location-dark.svg" alt="">
+                        <p>Oued Chaaba 05000, Batna, Algerie</p>
+                    </div>
+                    <div class="contact flow hidden slide-from-right">
+                        <img src="assets/icons/clock-dark.svg" alt="">
+                        <p>8:00h-16:00h</p>
+                    </div>
+                </div>
+            </section>
 
-    <!--<footer class="website-footer flex">
+            <!--<footer class="website-footer flex">
         <div class="logo">Avenir School</div>
         <nav>
             <ul class="flex column nav-items">
@@ -226,85 +224,86 @@
             <p>avenir.dz@gmail.com</p>
             <p>Oued Chaaba 05000, Batna, Algerie</p>
         </div>
-    </footer>-->
+     </footer>-->
 
 
 
-    </main>
+        </main>
     </div>
+    
 
     <script>
-        const images = document.querySelectorAll('.gallery-grid img');
-        const popup = document.querySelector('.popup');
-        const popupImage = document.querySelector('.popup-image');
-        const closeButton = document.querySelector('.close-button');
+            const images = document.querySelectorAll('.gallery-grid img');
+            const popup = document.querySelector('.popup');
+            const popupImage = document.querySelector('.popup-image');
+            const closeButton = document.querySelector('.close-button');
 
-        images.forEach(image => {
-            image.addEventListener('click', () => {
-                const imagePath = image.getAttribute('src');
-                popupImage.setAttribute('src', imagePath);
-                popup.style.display = 'block';
+            images.forEach(image => {
+                image.addEventListener('click', () => {
+                    const imagePath = image.getAttribute('src');
+                    popupImage.setAttribute('src', imagePath);
+                    popup.style.display = 'block';
+                });
             });
-        });
 
-        closeButton.addEventListener('click', () => {
-            popup.style.display = 'none';
-        });
-
-        window.addEventListener('click', (event) => {
-            if (event.target === popup) {
+            closeButton.addEventListener('click', () => {
                 popup.style.display = 'none';
-            }
-        });
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
 
 
-        //Slider
+            //Slider
 
-        const items = document.querySelectorAll('.slider img');
-        const itemCount = items.length;
-        const nextItem = document.querySelector('.next');
-        const previousItem = document.querySelector('.previous');
-        let count = 0;
+            const items = document.querySelectorAll('.slider img');
+            const itemCount = items.length;
+            const nextItem = document.querySelector('.next');
+            const previousItem = document.querySelector('.previous');
+            let count = 0;
 
-        function showNextItem() {
-            items[count].classList.remove('active');
+            function showNextItem() {
+                items[count].classList.remove('active');
 
-            if (count < itemCount - 1) {
-                count++;
-            } else {
-                count = 0;
-            }
+                if (count < itemCount - 1) {
+                    count++;
+                } else {
+                    count = 0;
+                }
 
-            items[count].classList.add('active');
-            console.log(count);
-        }
-
-        function showPreviousItem() {
-            items[count].classList.remove('active');
-
-            if (count > 0) {
-                count--;
-            } else {
-                count = itemCount - 1;
+                items[count].classList.add('active');
+                console.log(count);
             }
 
-            items[count].classList.add('active');
-            console.log(count);
-        }
+            function showPreviousItem() {
+                items[count].classList.remove('active');
 
-        function keyPress(e) {
-            e = e || window.event;
+                if (count > 0) {
+                    count--;
+                } else {
+                    count = itemCount - 1;
+                }
 
-            if (e.keyCode == '37') {
-                showPreviousItem();
-            } else if (e.keyCode == '39') {
-                showNextItem();
+                items[count].classList.add('active');
+                console.log(count);
             }
-        }
 
-        nextItem.addEventListener('click', showNextItem);
-        previousItem.addEventListener('click', showPreviousItem);
-        document.addEventListener('keydown', keyPress);
+            function keyPress(e) {
+                e = e || window.event;
+
+                if (e.keyCode == '37') {
+                    showPreviousItem();
+                } else if (e.keyCode == '39') {
+                    showNextItem();
+                }
+            }
+
+            nextItem.addEventListener('click', showNextItem);
+            previousItem.addEventListener('click', showPreviousItem);
+            document.addEventListener('keydown', keyPress);
 
     </script>
 </body>
