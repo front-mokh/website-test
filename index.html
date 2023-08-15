@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!--Leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="website-header flex">
+            <p class="logo">Avenir School.</p>
+            <nav>
+                <ul class="flex nav-items">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#about-us">À Propos</a></li>
+                    <li><a href="#our-values">Objectifs</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallerie</a></li>
+                    <li><a href="#contact-us">Contact</a></li>
+
+                </ul>
+            </nav>
+            <img id="theme-icon" src="assets/icons/moon.png" alt="">
+
+            <!--<a class="cta | secondary button" href="#contact-us">Contacter Nous</a>-->
+        </header>
+
+        <main class="flow">
+            <section class="hero split text-center">
+                <img class="hero-image shadow hidden slide-from-right" src="assets/images/avenire-school.png" alt="">
+                <div class="content hidden slide-from-left">
+                    <h1 class="title">
+                        Notre objectif est de vous aider à devenir <span>l’élite.</span>
+                        <!--Quand l'apprentissage ne connaît pas de frontières : Découvrez <span>Avenir School.</span>-->
+                    </h1>
+                    <p class="sub-title">Avenir school Guide votre parcours vers l’excellence avec ses experts</p>
+
+                    <div class="cta-group">
+                        <a class="secondary button" href="#about-us">En savoir plus</a>
+                        <a class="primary button" href="#contact-us">Contacter Nous</a>
+                    </div>
+                </div>
+
+
+
+
+            </section>
+            <section id="about-us" class="about-us-section center-content text-center split hidden">
+                <img class="illustration hidden slide-from-left" src="assets/images/who-are-we.svg" alt="">
+                <div class="content hidden flow slide-from-right">
+                    <h1 class="title">
+                        Qui sommes-nous?
+                    </h1>
+                    <p class="sub-title school-description">
+                        AVENIR est bien plus qu'une simple école. Nous sommes un projet pilote audacieux, dédié à
+                        repenser l'éducation en Algérie et à développer des solutions novatrices pour les défis de
+                        demain.
+                    </p>
+                </div>
+
+            </section>
+            <section id="our-values" class="our-values-section center-content split hidden">
+                <img class="illustration hidden slide-from-right" src="assets/images/goal.svg" alt="">
+                <div class="content hidden flow slide-from-left">
+                    <h1 class="title text-center">
+                        Quels sont nos objectifs?
+                    </h1>
+                    <ul class="goals flow">
+                        <li class="hidden slide-from-left" style="transition-delay: 0ms;">Créer un cadre d'apprentissage
+                            optimal pour nos élèves.</li>
+                        <li class="hidden slide-from-left" style="transition-delay: 80ms;">Soutenir la croissance
+                            personnelle et scolaire de nos élèves.</li>
+                        <li class="hidden slide-from-left" style="transition-delay: 160ms;">Offrir un enseignement
+                            moderne et adapté.</li>
+                        <li class="hidden slide-from-left" style="transition-delay: 240ms;">Encourager l'innovation et
+                            la créativité.</li>
+                        <li class="hidden slide-from-left" style="transition-delay: 320ms;">former des élites aux enjeux
+                            du monde réel.</li>
+                    </ul>
+                </div>
+
+
+            </section>
+            <section id="services" class="services-section flow center-content">
+
+                <h1 class="title">Que proposons-nous?</h1>
+                <div class="features-grid">
+                    <div class="main-card hidden slide-from-top" style="transition-delay: 0ms;">
+                        <h1 class="main-card-title">Nos Caractéristiques Spéciales <span>Pour Vous</span></h1>
+                    </div>
+                    <div class="feature flow hidden slide-from-right" style="transition-delay: 100ms;">
+                        <img src="assets/icons/steps.svg" alt="">
+                        <p>Parcours Intégral de la Maternelle au Lycée</p>
+
+                    </div>
+                    <div class="feature flow hidden slide-from-left" style="transition-delay: 200ms;">
+                        <img src="assets/icons/teacher.svg" alt="">
+                        <p>Enseignants Experts avec de Nouvelles Méthodes d'Enseignement</p>
+                    </div>
+                    <div class="feature flow hidden slide-from-buttom" style="transition-delay: 300ms;">
+                        <img src="assets/icons/courses.svg" alt="">
+                        <p>Cours de Soutien Gratuits pour un Accompagnement Supplémentaire</p>
+                    </div>
+                    <div class="feature flow hidden slide-from-right" style="transition-delay: 400ms;">
+                        <img src="assets/icons/multi-act.svg" alt="">
+                        <p>Installations et Activités Multisports, Culturelles et Artistiques</p>
+                    </div>
+                </div>
+
+
+            </section>
+
+
+            <section id="gallery" class="gallery-section flow center-content">
+
+                <h1 class="title">Faites le tour du campus.</h1>
+                <div class="slider-container">
+
+
+                    <div class="slider">
+                        <img class="active"
+                        src="assets/images/avenire-school.png" alt="">
+                    <img src="assets/images/as-class.jpg"
+                        alt="">
+                    <img
+                        src="assets/images/as-hall.png" alt="">
+                    <img 
+                        src="assets/images/as-waitting-room.png" alt="">
+                    <img  
+                        src="assets/images/as-building.png" alt="">
+                    <img
+                        src="assets/images/as-entry.jpg" alt="">
+                    </div>
+                    <div class="slider-controll">
+
+                        <button class="previous">
+                            <img src="assets/icons/previous.svg" alt="">
+                        </button>
+
+                        <button class="next">
+                            <img src="assets/icons/next.svg" alt="">
+                        </button>
+
+                    </div>
+                </div>
+                <div class="gallery-grid" style="display: none;">
+                    <img class="hidden slide-from-left" style="transition-delay: 0ms;"
+                        src="assets/images/avenire-school.png" alt="">
+                    <img class="hidden slide-from-top" style="transition-delay: 100ms;" src="assets/images/as-class.jpg"
+                        alt="">
+                    <img class="hidden slide-from-right" style="transition-delay: 200ms;"
+                        src="assets/images/as-hall.png" alt="">
+                    <img class="hidden slide-from-left" style="transition-delay: 300ms;"
+                        src="assets/images/as-waitting-room.png" alt="">
+                    <img class="hidden slide-from-buttom" style="transition-delay: 400ms;"
+                        src="assets/images/as-building.png" alt="">
+                    <img class="hidden slide-from-right" style="transition-delay: 500ms;"
+                        src="assets/images/as-entry.jpg" alt="">
+                </div>
+                <div class="popup">
+                    <span class="close-button">&times;</span>
+                    <img src="" alt="Popup Image" class="popup-image">
+                    <div class="overlay"></div>
+                </div>
+
+
+
+            </section>
+    </div>
+    <section id="contact-us" class="contact-us-section text-inverted flow">
+
+        <h1 class="title">Contacter-nous!</h1>
+        <p class="sub-title">N'hésitez pas à nous contacter par téléphone, e-mail ou en vous rendant sur
+            place. Nous sommes là
+            pour répondre à vos questions!</p>
+        <div class="contacts-grid">
+            <div class="contact flow hidden slide-from-left">
+                <img class="ring" src="assets/icons/phone-dark.svg" alt="">
+                <p>+213 559 83 03</p>
+            </div>
+            <div class="contact flow hidden slide-from-right">
+                <img src="assets/icons/mail-dark.svg" alt="">
+                <p>avenir.dz@gmail.com</p>
+            </div>
+            <div class="contact flow hidden slide-from-left">
+                <img src="assets/icons/location-dark.svg" alt="">
+                <p>Oued Chaaba 05000, Batna, Algerie</p>
+            </div>
+            <div class="contact flow hidden slide-from-right">
+                <img src="assets/icons/clock-dark.svg" alt="">
+                <p>8:00h-16:00h</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!--<footer class="website-footer flex">
+        <div class="logo">Avenir School</div>
+        <nav>
+            <ul class="flex column nav-items">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#about-us">À Propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallerie</a></li>
+                
+            </ul>
+        </nav>
+        <div class="footer-contact-card">
+            <p>Avenir School</p>
+            <p>+213 559 83 03</p>
+            <p>avenir.dz@gmail.com</p>
+            <p>Oued Chaaba 05000, Batna, Algerie</p>
+        </div>
+    </footer>-->
+
+
+
+    </main>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.gallery-grid img');
+        const popup = document.querySelector('.popup');
+        const popupImage = document.querySelector('.popup-image');
+        const closeButton = document.querySelector('.close-button');
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                const imagePath = image.getAttribute('src');
+                popupImage.setAttribute('src', imagePath);
+                popup.style.display = 'block';
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+
+
+        //Slider
+
+        const items = document.querySelectorAll('.slider img');
+        const itemCount = items.length;
+        const nextItem = document.querySelector('.next');
+        const previousItem = document.querySelector('.previous');
+        let count = 0;
+
+        function showNextItem() {
+            items[count].classList.remove('active');
+
+            if (count < itemCount - 1) {
+                count++;
+            } else {
+                count = 0;
+            }
+
+            items[count].classList.add('active');
+            console.log(count);
+        }
+
+        function showPreviousItem() {
+            items[count].classList.remove('active');
+
+            if (count > 0) {
+                count--;
+            } else {
+                count = itemCount - 1;
+            }
+
+            items[count].classList.add('active');
+            console.log(count);
+        }
+
+        function keyPress(e) {
+            e = e || window.event;
+
+            if (e.keyCode == '37') {
+                showPreviousItem();
+            } else if (e.keyCode == '39') {
+                showNextItem();
+            }
+        }
+
+        nextItem.addEventListener('click', showNextItem);
+        previousItem.addEventListener('click', showPreviousItem);
+        document.addEventListener('keydown', keyPress);
+
+    </script>
+</body>
+
+</html>

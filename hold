@@ -1,0 +1,33 @@
+<div class="levels-card" style="display: none;">
+                    <div class="card-header">
+                        Programme pour les 03 Niveaux Scolaires
+                    </div>
+
+                    <div class="level">
+                        <img src="assets/icons/primary.png" alt="">
+                        <p>Primaire</p>
+                    </div>
+
+                    <div class="level">
+                        <img src="assets/icons/middle.png" alt="">
+                        <p>CEM</p>
+                    </div>
+
+                    <div class="level">
+                        <img src="assets/icons/high.png " alt="">
+                        <p>Lycée</p>
+                    </div>
+
+                </div>
+
+                <h1 class="title">Avantages de notre ecole</h1>
+                <ul class="check-list">
+                    <li>Parcours Éducatif complet de la primaire au lycée</li>
+                    <li>Installations modernes avec laboratoires et installations sportives de pointe..</li>
+                    <li>Cours de soutien disponibles gratuitement.</li>
+                    <li>Nombre d’élèves par classe limité à 16.</li>
+
+                </ul>
+
+
+                <a href="https://storyset.com/marketing">Marketing illustrations by Storyset</a>
