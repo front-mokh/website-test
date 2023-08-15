@@ -11,7 +11,6 @@
   */
 * {
   margin: 0;
-  border: 1px red solid;
 }
 /*
     Typographic tweaks!
@@ -72,7 +71,83 @@ a {
   color: inherit;
   text-decoration: none;
 }
+/*utilities*/
 
+.flex {
+    display: grid;
+    align-content: center;
+    gap: var(--spacing, 2rem);
+  }
+  .column {
+    flex-direction: column;
+  }
+  .split {
+    display: grid;
+    grid-auto-flow: row;
+    gap: var(--spacing, 1rem);
+  }
+  
+  .flow > * + * {
+    margin-top: var(--flow-spacing, 1.25rem);
+  }
+  
+  .hidden {
+    opacity: 0;
+    filter: blur(1px);
+    transition: all 1s;
+  }
+  
+  .slide-from-left {
+    transform: translateX(-4rem);
+  }
+  
+  .slide-from-right {
+    transform: translateX(4rem);
+  }
+  
+  .slide-from-top {
+    transform: translateY(-2rem);
+  }
+  
+  .slide-from-buttom {
+    transform: translateY(2rem);
+  }
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) translateY(0);
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-inverted {
+    --clr-text: hsl(0, 0%, 100%);
+    --clr-text-secondary: hsl(240, 8%, 87%);
+  }
+  
+  .center-content {
+    display: grid;
+    place-items: center;
+    align-content: center;
+  }
+  
+  .ring {
+    animation: ring 1s infinite;
+  }
+  
+  @keyframes ring {
+    0%,
+    20% {
+      transform: rotate(0deg);
+    }
+    20%,
+    40% {
+      transform: rotate(10deg);
+    }
+  }
+  
 /* Custom CSS Variables*/
 :root {
   --clr-primary: hsl(238, 31%, 34%);
@@ -133,6 +208,9 @@ body {
   --flow-spacing: 1rem;
 }
 
+section:not(.hero, .contact-us-section){
+    padding-inline: 1.5rem;
+}
 .website-header {
   padding: 1rem 0.25rem;
   border-bottom: 2.5px solid var(--clr-accent);
@@ -152,7 +230,7 @@ body {
 }
 
 .button {
-  padding: 0.75rem 2.25rem;
+  padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   border: 0;
   background-color: var(--clr-primary);
@@ -178,8 +256,11 @@ body {
 
 /*Hero*/
 
+.hero{
+    padding-bottom: 5.5rem;
+}
 .hero .content {
-  padding-inline: var(--inline-padding);
+  padding-inline: 1.5rem;
 }
 .title {
   font-size: 2.15rem;
@@ -204,7 +285,6 @@ body {
 .cta-group {
   display: grid;
   grid-auto-flow: row;
-  padding-inline: 2rem;
   gap: 1rem;
   margin-top: 5rem;
   margin-left: 0;
@@ -217,10 +297,8 @@ body {
   place-items: center;
   align-content: center;
 }*/
-.services-section {
-  padding-inline: var(--inline-padding);
-  padding-block: var(--block-padding);
-}
+
+
 .levels-card {
   padding: 1.5rem 3rem;
   background-color: var(--clr-primary);
@@ -264,8 +342,7 @@ body {
 /*About Us Section*/
 
 .about-us-section {
-  padding-inline: var(--inline-padding);
-  padding-block: var(--block-padding);
+    --flow-spacing: 3rem;
   font-family: var(--ff-base);
 }
 
@@ -294,17 +371,18 @@ body {
 }
 
 .illustration {
-  filter: drop-shadow(0.5px 0.5px 5px hsl(0, 0%, 70%));
-  width: 60%;
+  filter: drop-shadow(0.5px 0.5px 1px rgba(0, 0, 0, 0.3));
+  width: 65%;
   margin: 0 auto;
 }
 
 /*Goals*/
 
 .our-values-section {
-  padding-inline: var(--inline-padding);
-  padding-block: var(--block-padding);
+  --flow-spacing: 3rem;
 }
+
+
 .goals li {
   --flow-spacing: 1.25rem;
   
@@ -326,10 +404,7 @@ body {
 
 /*Features*/
 
-.features-section {
-  padding-inline: var(--inline-padding);
-  padding-block: var(--block-padding);
-}
+
 .features-grid {
   --flow-spacing: 1.5rem;
   display: grid;
@@ -371,6 +446,7 @@ body {
 
   display: grid;
   place-items: center;
+  align-content: center;
   color: var(--clr-primary);
   font-size: 0.925rem;
   text-align: center;
@@ -384,8 +460,7 @@ body {
 
 .gallery-section {
   text-align: center;
-  padding-inline: var(--inline-padding);
-  padding-block: var(--block-padding);
+ 
 }
 
 .gallery-grid {
@@ -440,17 +515,21 @@ body {
 /*Contact us*/
 
 .contact-us-section {
-  --flow-spacing: 3rem;
-  --inline-padding: 7rem;
+
   background-color: var(--clr-primary);
-  padding-block: var(--block-padding);
+    display: grid;
+    place-content: center;
+  
   text-align: center;
 }
 
 .contacts-grid {
+    font-size: 0.9rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-inline: 1rem;
 }
 
 .contact {
@@ -490,86 +569,10 @@ body {
   font-size: 0.8rem;
 }
 
-/*utilities*/
-
-.flex {
-  display: grid;
-  align-content: center;
-  gap: var(--spacing, 2rem);
-}
-.column {
-  flex-direction: column;
-}
-.split {
-  display: grid;
-  grid-auto-flow: row;
-  gap: var(--spacing, 1rem);
-}
-
-.flow > * + * {
-  margin-top: var(--flow-spacing, 1.25rem);
-}
-
-.hidden {
-  opacity: 0;
-  filter: blur(1px);
-  transition: all 1s;
-}
-
-.slide-from-left {
-  transform: translateX(-4rem);
-}
-
-.slide-from-right {
-  transform: translateX(4rem);
-}
-
-.slide-from-top {
-  transform: translateY(-2rem);
-}
-
-.slide-from-buttom {
-  transform: translateY(2rem);
-}
-.show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0) translateY(0);
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-inverted {
-  --clr-text: hsl(0, 0%, 100%);
-  --clr-text-secondary: hsl(240, 8%, 87%);
-}
-
-.center-content {
-  display: grid;
-  place-items: center;
-  align-content: center;
-}
-
-.ring {
-  animation: ring 1s infinite;
-}
-
-@keyframes ring {
-  0%,
-  20% {
-    transform: rotate(0deg);
-  }
-  20%,
-  40% {
-    transform: rotate(10deg);
-  }
-}
 
 /*Media queries*/
 
-@media(max-width: 1000px) {
+@media(max-width: 900px) {
 
  
     .nav-items{
@@ -605,12 +608,10 @@ body {
 section:not(.hero){
     padding-block: 4rem;
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   section {
     height: 100vh;
     margin-block: 0;
-    padding-inline: var(--inline-padding);
-    padding-block: var(--block-padding);
   }
   nav {
     display: block;
@@ -619,6 +620,7 @@ section:not(.hero){
   .split {
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
+    gap: 4rem;
   }
 
   .flex {
@@ -628,12 +630,14 @@ section:not(.hero){
 
   .cta-group {
     grid-auto-flow: column;
-    padding-inline: 0;
+  
+   
   }
 
   .hero {
     text-align: left;
-    margin-block: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
   }
   .hero-image {
     border-radius: 0.5rem;
@@ -653,10 +657,15 @@ section:not(.hero){
     place-items: center;
   }
 
+  .feature{
+    padding-block: 1rem;
+  }
   .features-grid {
     grid-template-columns: repeat(3, 1fr);
+    padding-inline: 0;
   }
 
+  
   .nav-items{
     display: flex;
     flex-direction: row;
@@ -674,6 +683,18 @@ section:not(.hero){
   .gallery-grid{
     display: grid;
   }
+  .container{
+    padding-inline: 4rem;
+  }
+
+  .contact-us-section{
+    
+    padding: 8rem;
+    
+  }
+ 
+ 
+  
 }
 
 /*iMAGE slider*/
@@ -699,6 +720,7 @@ section:not(.hero){
 
 .next:hover img {
   transform: scale(1.02);
+
 }
 
 .slider-controll {
@@ -708,6 +730,7 @@ section:not(.hero){
   justify-content: space-between;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   width: 100%;
 }
 
@@ -721,6 +744,7 @@ section:not(.hero){
   display: none;
   box-shadow: 10px 10px 20px 0 rgba(94, 47, 59, 0.2);
   object-fit: cover;
+  border-radius: 0.5rem;
 }
 
 img.active {
