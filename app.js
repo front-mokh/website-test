@@ -24,16 +24,13 @@ themeIcon.onclick = function () {
     console.log("DARK");
     navToggleIcon.src = "assets/icons/hamburger-dark.svg";
     themeIcon.src = "assets/icons/sun.png";
-    phoneIcon.src = "assets/icons/phone-dark.svg";
-    mailIcon.src = "assets/icons/mail-dark.svg";
-    locationIcon.src = "assets/icons/location-dark.svg";
+    
     
   } else {
+    navToggleIcon.src = "assets/icons/hamburger.svg";
     themeIcon.src = "assets/icons/moon.png";
-    phoneIcon.src = "assets/icons/phone.svg";
-    mailIcon.src = "assets/icons/mail.svg";
-    locationIcon.src = "assets/icons/location.svg";
-    navToggleIcon.src = "assets/icons/humburger.svg";
+    
+    
   }
 };
 
@@ -41,10 +38,20 @@ const navToggle = document.querySelector(".mobile-nav-toggle");
 const nav = document.querySelector(".nav-items");
 navToggle.onclick = function () {
   const visibility = nav.getAttribute("data-visible");
+  
+ 
   if (visibility === "false") {
+    
     nav.setAttribute("data-visible", true);
+    navToggleIcon.src = "assets/icons/close.svg";
   } else {
     nav.setAttribute("data-visible", false);
+    if (document.body.classList.contains("dark-theme")){
+        navToggleIcon.src = "assets/icons/hamburger-dark.svg";
+    }else{
+        navToggleIcon.src = "assets/icons/hamburger.svg";
+
+    }
   }
 };
 
@@ -56,5 +63,6 @@ navLinks.forEach((link) => {
     if (visibility === "true") {
       nav.setAttribute("data-visible", false);
     }
+   
   });
 });
