@@ -62,6 +62,12 @@ navLinks.forEach((link) => {
     
     if (visibility === "true") {
       nav.setAttribute("data-visible", false);
+       if (document.body.classList.contains("dark-theme")){
+        navToggleIcon.src = "assets/icons/hamburger-dark.svg";
+    }else{
+        navToggleIcon.src = "assets/icons/hamburger.svg";
+
+    }
     }
    
   });
