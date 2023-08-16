@@ -563,11 +563,12 @@ nav {
     z-index: 2;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     gap: 2rem;
     padding-top: 4rem;
     transform: translateX(100%);
     font-size: 1.3rem;
+    color: hsl(240, 8%, 87%);
   }
 
   .nav-items[data-visible="true"] {
@@ -611,6 +612,9 @@ section:not(.hero) {
 
   #theme-icon {
     margin-right: 0;
+  }
+  .hero .content{
+    padding-top: 2.5rem;
   }
   .split {
     grid-auto-flow: column;
