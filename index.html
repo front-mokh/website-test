@@ -20,7 +20,7 @@
     <script defer src="app.js"></script>
 
     <style>
-       
+
     </style>
 </head>
 
@@ -37,11 +37,12 @@
                     <li><a href="#gallery">Gallerie</a></li>
                     <li><a href="#contact-us">Contact</a></li>
                 </ul>
+                <img id="theme-icon" src="assets/icons/moon.png" alt="">
+                <button class="mobile-nav-toggle">
+                    <img id="nav-toggle-icon" src="assets/icons/hamburger.svg" alt="">
+                </button>
             </nav>
-            <img id="theme-icon" src="assets/icons/moon.png" alt="">
-            <button class="mobile-nav-toggle">
-                <img src="assets/icons/hamburger.svg" alt="">
-            </button>
+
             <!--<a class="cta | secondary button" href="#contact-us">Contacter Nous</a>-->
         </header>
 
@@ -180,34 +181,38 @@
 
 
             </section>
-        </div>
-            <section id="contact-us" class="contact-us-section text-inverted flow">
+    </div>
+    <section id="contact-us" class="contact-us-section text-inverted flow">
 
-                <h1 class="title">Contacter-nous!</h1>
-                <p class="sub-title">N'hésitez pas à nous contacter par téléphone, e-mail ou en vous rendant sur
-                    place. Nous sommes là
-                    pour répondre à vos questions!</p>
-                <div class="contacts-grid">
-                    <div class="contact flow hidden slide-from-left">
-                        <img class="ring" src="assets/icons/phone-dark.svg" alt="">
-                        <p>+213 (0)5 59 83 03</p>
-                    </div>
-                    <div class="contact flow hidden slide-from-right">
-                        <img src="assets/icons/mail-dark.svg" alt="">
-                        <p>avenir.dz@gmail.com</p>
-                    </div>
-                    <div class="contact flow hidden slide-from-left">
-                        <img src="assets/icons/location-dark.svg" alt="">
-                        <p>Hamla 03 à côté du tribunal, Batna, Algerie</p>
-                    </div>
-                    <div class="contact flow hidden slide-from-right">
-                        <img src="assets/icons/clock-dark.svg" alt="">
-                        <p>8:00h-16:00h</p>
-                    </div>
+        <h1 class="title">Contacter-nous!</h1>
+        <p class="sub-title">N'hésitez pas à nous contacter par téléphone, e-mail ou en vous rendant sur
+            place. Nous sommes là
+            pour répondre à vos questions!</p>
+        <div class="contacts-grid">
+            <a href="tel:+2135598303">
+                <div class="contact flow hidden slide-from-left">
+                    <img class="ring" src="assets/icons/phone-dark.svg" alt="">
+                    <p>+213 (0)5 59 83 03</p>
                 </div>
-            </section>
+            </a>
+            <a href="mailto:avenir.dz@gmail.com">
+                <div class="contact flow hidden slide-from-right">
+                    <img src="assets/icons/mail-dark.svg" alt="">
+                    <p>avenir.dz@gmail.com</p>
+                </div>
+            </a>
+            <div class="contact flow hidden slide-from-left">
+                <img src="assets/icons/location-dark.svg" alt="">
+                <p>Hamla 03 à côté du tribunal, Batna, Algerie</p>
+            </div>
+            <div class="contact flow hidden slide-from-right">
+                <img src="assets/icons/clock-dark.svg" alt="">
+                <p>8:00h-16:00h</p>
+            </div>
+        </div>
+    </section>
 
-            <!--<footer class="website-footer flex">
+    <!--<footer class="website-footer flex">
         <div class="logo">Avenir School</div>
         <nav>
             <ul class="flex column nav-items">
@@ -228,82 +233,82 @@
 
 
 
-        </main>
+    </main>
     </div>
-    
+
 
     <script>
-            const images = document.querySelectorAll('.gallery-grid img');
-            const popup = document.querySelector('.popup');
-            const popupImage = document.querySelector('.popup-image');
-            const closeButton = document.querySelector('.close-button');
+        const images = document.querySelectorAll('.gallery-grid img');
+        const popup = document.querySelector('.popup');
+        const popupImage = document.querySelector('.popup-image');
+        const closeButton = document.querySelector('.close-button');
 
-            images.forEach(image => {
-                image.addEventListener('click', () => {
-                    const imagePath = image.getAttribute('src');
-                    popupImage.setAttribute('src', imagePath);
-                    popup.style.display = 'block';
-                });
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                const imagePath = image.getAttribute('src');
+                popupImage.setAttribute('src', imagePath);
+                popup.style.display = 'block';
             });
+        });
 
-            closeButton.addEventListener('click', () => {
+        closeButton.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === popup) {
                 popup.style.display = 'none';
-            });
-
-            window.addEventListener('click', (event) => {
-                if (event.target === popup) {
-                    popup.style.display = 'none';
-                }
-            });
+            }
+        });
 
 
-            //Slider
+        //Slider
 
-            const items = document.querySelectorAll('.slider img');
-            const itemCount = items.length;
-            const nextItem = document.querySelector('.next');
-            const previousItem = document.querySelector('.previous');
-            let count = 0;
+        const items = document.querySelectorAll('.slider img');
+        const itemCount = items.length;
+        const nextItem = document.querySelector('.next');
+        const previousItem = document.querySelector('.previous');
+        let count = 0;
 
-            function showNextItem() {
-                items[count].classList.remove('active');
+        function showNextItem() {
+            items[count].classList.remove('active');
 
-                if (count < itemCount - 1) {
-                    count++;
-                } else {
-                    count = 0;
-                }
-
-                items[count].classList.add('active');
-                console.log(count);
+            if (count < itemCount - 1) {
+                count++;
+            } else {
+                count = 0;
             }
 
-            function showPreviousItem() {
-                items[count].classList.remove('active');
+            items[count].classList.add('active');
+            console.log(count);
+        }
 
-                if (count > 0) {
-                    count--;
-                } else {
-                    count = itemCount - 1;
-                }
+        function showPreviousItem() {
+            items[count].classList.remove('active');
 
-                items[count].classList.add('active');
-                console.log(count);
+            if (count > 0) {
+                count--;
+            } else {
+                count = itemCount - 1;
             }
 
-            function keyPress(e) {
-                e = e || window.event;
+            items[count].classList.add('active');
+            console.log(count);
+        }
 
-                if (e.keyCode == '37') {
-                    showPreviousItem();
-                } else if (e.keyCode == '39') {
-                    showNextItem();
-                }
+        function keyPress(e) {
+            e = e || window.event;
+
+            if (e.keyCode == '37') {
+                showPreviousItem();
+            } else if (e.keyCode == '39') {
+                showNextItem();
             }
+        }
 
-            nextItem.addEventListener('click', showNextItem);
-            previousItem.addEventListener('click', showPreviousItem);
-            document.addEventListener('keydown', keyPress);
+        nextItem.addEventListener('click', showNextItem);
+        previousItem.addEventListener('click', showPreviousItem);
+        document.addEventListener('keydown', keyPress);
 
     </script>
 </body>
