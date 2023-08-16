@@ -33,3 +33,14 @@ themeIcon.onclick = function(){
     }
 }
 
+const navToggle = document.querySelector('.mobile-nav-toggle');
+const nav = document.querySelector('.nav-items');
+navToggle.onclick = function(){
+    const visibility = nav.getAttribute("data-visible");
+console.log(visibility)
+    if(visibility === "false"){
+        nav.setAttribute("data-visible", true)
+    }else{
+        nav.setAttribute("data-visible", false)
+    }
+}
