@@ -29,8 +29,8 @@
         <header class="website-header">
             <p class="logo">Avenir School.</p>
             <nav>
-                <ul class="nav-items">
-                    <li><a href="#">Accueil</a></li>
+                <ul class="nav-items" data-visible="false">
+                    <li><a href="#hero">Accueil</a></li>
                     <li><a href="#about-us">À Propos</a></li>
                     <li><a href="#our-values">Objectifs</a></li>
                     <li><a href="#services">Services</a></li>
@@ -46,7 +46,7 @@
         </header>
 
         <main>
-            <section class="hero split text-center">
+            <section id="hero" class="hero split text-center">
                 <img class="hero-image shadow hidden slide-from-right" src="assets/images/avenire-school.png" alt="">
                 <div class="content hidden slide-from-left">
                     <h1 class="title">
@@ -65,9 +65,9 @@
 
 
             </section>
-            <section id="about-us" class="about-us-section center-content text-center split hidden">
-                <img class="illustration hidden slide-from-left" src="assets/images/who-are-we.svg" alt="">
-                <div class="content hidden flow slide-from-right">
+            <section id="about-us" class="about-us-section center-content text-center split">
+                <img class="illustration hidden slide-from-left-right" src="assets/images/who-are-we.svg" alt="">
+                <div class="content hidden flow slide-from-right-left">
                     <h1 class="title">
                         Qui sommes-nous?
                     </h1>
@@ -117,11 +117,11 @@
                         <img src="assets/icons/teacher.svg" alt="">
                         <p>Enseignants Experts avec de Nouvelles Méthodes d'Enseignement</p>
                     </div>
-                    <div class="feature flow hidden slide-from-buttom" style="transition-delay: 300ms;">
+                    <div class="feature flow hidden slide-from-buttom-right" style="transition-delay: 300ms;">
                         <img src="assets/icons/courses.svg" alt="">
                         <p>Cours de Soutien Gratuits pour un Accompagnement Supplémentaire</p>
                     </div>
-                    <div class="feature flow hidden slide-from-right" style="transition-delay: 400ms;">
+                    <div class="feature flow hidden slide-from-right-left" style="transition-delay: 400ms;">
                         <img src="assets/icons/multi-act.svg" alt="">
                         <p>Installations et Activités Multisports, Culturelles et Artistiques</p>
                     </div>
@@ -190,7 +190,7 @@
                 <div class="contacts-grid">
                     <div class="contact flow hidden slide-from-left">
                         <img class="ring" src="assets/icons/phone-dark.svg" alt="">
-                        <p>+213 559 83 03</p>
+                        <p>+213 (0)5 59 83 03</p>
                     </div>
                     <div class="contact flow hidden slide-from-right">
                         <img src="assets/icons/mail-dark.svg" alt="">
@@ -198,7 +198,7 @@
                     </div>
                     <div class="contact flow hidden slide-from-left">
                         <img src="assets/icons/location-dark.svg" alt="">
-                        <p>Oued Chaaba 05000, Batna, Algerie</p>
+                        <p>Hamla 03 à côté du tribunal, Batna, Algerie</p>
                     </div>
                     <div class="contact flow hidden slide-from-right">
                         <img src="assets/icons/clock-dark.svg" alt="">
