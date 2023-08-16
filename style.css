@@ -215,6 +215,7 @@ nav {
   font-family: var(--ff-accent);
   font-size: 1.1rem;
   font-weight: var(--fw-bold);
+  padding-left: 1rem;
 }
 
 .button {
@@ -604,6 +605,8 @@ section:not(.hero) {
   padding-block: 4rem;
 }
 @media (min-width: 900px) {
+  .logo{
+  padding-left: 0;}
   section {
     height: 100vh;
     padding-block: 0;
