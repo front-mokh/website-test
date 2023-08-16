@@ -215,7 +215,7 @@ nav {
   font-family: var(--ff-accent);
   font-size: 1.1rem;
   font-weight: var(--fw-bold);
-  padding-left: 1rem;
+  padding-left: 0.8rem;
 }
 
 .button {
