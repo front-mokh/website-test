@@ -600,7 +600,7 @@ section:not(.hero, .contact-us-section) {
 }
 
 section:not(.hero) {
-  padding-block: 2.5rem;
+  padding-block: 3.5rem;
 }
 @media (min-width: 900px) {
   section {
