@@ -669,7 +669,7 @@ section:not(.hero) {
     flex-direction: row;
     justify-content: center;
     gap: 2rem;
-    padding-right: 8rem;
+    padding-right: 2rem;
   }
   .mobile-nav-toggle {
     display: none;
@@ -742,7 +742,7 @@ section:not(.hero) {
 }
 
 .slider-controll button {
-  width: 2.5rem;
+  width: 2.8rem;
 }
 
 .slider img {
