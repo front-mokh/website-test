@@ -559,6 +559,8 @@ nav {
 .contacts {
   margin-top: 1rem;
 }
+.contacts-grid {
+    font-size: 0.8rem;}
 
 .footer-contact-card {
   padding: 1rem;
@@ -622,9 +624,8 @@ section:not(.hero) {
   padding-block: 4rem;
 }
 @media (min-width: 900px) {
-  nav{
-    
-  }
+  .contacts-grid {
+    font-size: 0.9rem;}
   section {
     height: 100vh;
     padding-block: 0;
