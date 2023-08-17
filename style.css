@@ -137,6 +137,21 @@ a {
   }
 }
 
+.fall{
+  animation: fall 1s infinite;
+}
+
+@keyframes fall{
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  10%,
+  30% {
+    transform: translateY(-3px);
+  }
+}
+
 /* Custom CSS Variables*/
 :root {
   --clr-primary: hsl(238, 31%, 34%);
@@ -205,7 +220,9 @@ section:not(.hero, .contact-us-section) {
 nav {
   display: flex;
   flex-direction: row;
+
   position: relative;
+
 }
 
 .nav-items a:hover {
@@ -215,7 +232,6 @@ nav {
   font-family: var(--ff-accent);
   font-size: 1.1rem;
   font-weight: var(--fw-bold);
-  padding-left: 0.8rem;
 }
 
 .button {
@@ -558,16 +574,17 @@ nav {
   .nav-items {
     position: fixed;
     inset: 0 0 0 0;
-    background-color: hsl(238, 31%, 34%, 0.9);
+    background-color: hsl(238, 31%, 34%, 0.8);
     backdrop-filter: blur(5px);
     display: flex;
     z-index: 2;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2.2rem;
+    gap: 2rem;
+    padding-top: 4rem;
     transform: translateX(100%);
-    font-size: 1.45rem;
+    font-size: 1.3rem;
     color: hsl(240, 8%, 87%);
   }
 
@@ -605,8 +622,9 @@ section:not(.hero) {
   padding-block: 4rem;
 }
 @media (min-width: 900px) {
-  .logo{
-  padding-left: 0;}
+  nav{
+    
+  }
   section {
     height: 100vh;
     padding-block: 0;
@@ -616,7 +634,7 @@ section:not(.hero) {
     margin-right: 0;
   }
   .hero .content{
-    padding-top: 2.5rem;
+    padding-top: 1.5rem;
   }
   .split {
     grid-auto-flow: column;
@@ -732,7 +750,6 @@ section:not(.hero) {
 
 .slider-controll {
   list-style: none;
-
   display: flex;
   justify-content: space-between;
   position: absolute;
