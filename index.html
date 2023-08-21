@@ -34,7 +34,7 @@
                     <li><a href="#about-us">À Propos</a></li>
                     <li><a href="#our-values">Objectifs</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#gallery">Gallerie</a></li>
+                    <li><a href="#gallery">Galerie</a></li>
                     <li><a href="#contact-us">Contact</a></li>
                 </ul>
                 <img id="theme-icon" src="assets/icons/moon.png" alt="">
@@ -51,7 +51,8 @@
                 <img class="hero-image shadow hidden slide-from-right" src="assets/images/avenire-school.png" alt="">
                 <div class="content hidden slide-from-left">
                     <h1 class="title">
-                        Notre objectif est de vous aider à devenir <span>l’élite.</span>
+                        Rejoignez Notre Communauté d'Apprentissage d'<span>Excellence.</span>
+                        <!--Notre objectif est de vous aider à devenir <span>l’élite.</span>-->
                         <!--Quand l'apprentissage ne connaît pas de frontières : Découvrez <span>Avenir School.</span>-->
                     </h1>
                     <p class="sub-title">Avenir school Guide votre parcours vers l’excellence avec ses experts</p>
@@ -111,7 +112,7 @@
                     </div>
                     <div class="feature flow hidden slide-from-right" style="transition-delay: 100ms;">
                         <img src="assets/icons/steps.svg" alt="">
-                        <p>Parcours Intégral de la Maternelle au Lycée</p>
+                        <p>Parcours Intégral de la Primaire au Lycée</p>
 
                     </div>
                     <div class="feature flow hidden slide-from-left" style="transition-delay: 200ms;">
@@ -158,6 +159,15 @@
 
                     </div>
                 </div>
+                <div class="indicator-container">
+                    <div class="active"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
                 <div class="gallery-grid">
                     <img class="hidden slide-from-left" style="transition-delay: 0ms;"
                         src="assets/images/avenire-school.png" alt="">
@@ -184,30 +194,32 @@
     </div>
     <section id="contact-us" class="contact-us-section text-inverted flow">
 
-        <h1 class="title">Contacter-nous!</h1>
-        <p class="sub-title">N'hésitez pas à nous contacter par téléphone, e-mail ou en vous rendant sur
-            place. Nous sommes là
-            pour répondre à vos questions!</p>
+        <div>
+            <h1 class="title">Contacter-nous!</h1>
+            <p class="sub-title">N'hésitez pas à nous contacter par téléphone, e-mail ou en vous rendant sur
+                place. Nous sommes là
+                pour répondre à vos questions!</p>
+        </div>
         <div class="contacts-grid">
 
             <div class="contact hidden slide-from-left">
-                <a href="tel:+2135598303" class="flow contact ">
+                <a href="tel:+213551735956" class="flow contact ">
                     <img class="ring" src="assets/icons/phone-dark.svg" alt="">
-                    <p>+213 (0)5 59 83 03</p>
+                    <p>+213 (0)5 51 73 59 56</p>
                 </a>
             </div>
 
 
-            <div class="contact flow hidden slide-from-right">
-                <a href="mailto:ecoleavenir.dz@gmail.com" class="contact flow">
+            <div class="contact hidden slide-from-right mail">
+                <a href="mailto:avenir.dz@gmail.com" class="contact flow">
                     <img class="fall" src="assets/icons/mail-dark.svg" alt="">
-                    <p>ecoleavenir.dz@gmail.com</p>
+                    <p>support@avenir.dz</p>
                 </a>
             </div>
 
             <div class="contact flow hidden slide-from-left">
                 <img src="assets/icons/location-dark.svg" alt="">
-                <p>Hamla 03 à côté du tribunal, Batna, Algerie</p>
+                <p>15 Avenue Ahmed Bey, Quartier Bab El Oued, Alger, Algérie</p>
             </div>
             <div class="contact flow hidden slide-from-right">
                 <img src="assets/icons/clock-dark.svg" alt="">
@@ -215,6 +227,7 @@
             </div>
         </div>
     </section>
+    <footer class="footer">Designed & Coded by WebVision</footer>
 
     <!--<footer class="website-footer flex">
         <div class="logo">Avenir School</div>
@@ -246,6 +259,7 @@
         const popup = document.querySelector('.popup');
         const popupImage = document.querySelector('.popup-image');
         const closeButton = document.querySelector('.close-button');
+        const indicators = document.querySelectorAll('.indicator-container > div');
 
         images.forEach(image => {
             image.addEventListener('click', () => {
@@ -276,6 +290,7 @@
 
         function showNextItem() {
             items[count].classList.remove('active');
+            indicators[count].classList.remove('active');
 
             if (count < itemCount - 1) {
                 count++;
@@ -284,11 +299,13 @@
             }
 
             items[count].classList.add('active');
-            console.log(count);
+            indicators[count].classList.add('active');
+            
         }
 
         function showPreviousItem() {
             items[count].classList.remove('active');
+            indicators[count].classList.remove('active');
 
             if (count > 0) {
                 count--;
@@ -297,6 +314,7 @@
             }
 
             items[count].classList.add('active');
+            indicators[count].classList.add('active');
             console.log(count);
         }
 
